@@ -1,0 +1,29 @@
+# Project base information
+project:
+  name: "C2C6_Project"
+  threads: 36
+  adapter_r1: "AGATCGGAAGAGCACACGTCTGAACTCCAGTCAC" # Illumina标准接头
+  adapter_r2: "AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT"
+  ref_genome: "/media/desk16/iy11913/zhailab/reference/hisat2_GRCm39/grcm39"
+  gtf: "/media/desk16/iy11913/zhailab/reference/Mus_musculus.GRCm39.110.gtf"
+
+# directories structure
+directories:
+  raw: "00_Rawdata"
+  qc: "01_QC"
+  mapping: "02_Mapping"
+  as: "03_AS"
+  novel: "04_Novel"
+  snv: "05_SNV"
+  expression: "06_GeneExpression"
+  adv_qc: "07_AdvancedQC"
+  de: "08_DE"
+  go: "09_GO"
+  kegg: "10_KEGG"
+  pca: "12_PCA"
+  gsea: "13_GSEA"
+
+# dynamic mapping
+file_pattern:
+  r1_suffix: "_L1_1.fq.gz"
+  r2_suffix: "_L1_2.fq.gz"

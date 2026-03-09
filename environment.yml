@@ -1,0 +1,42 @@
+name: Bulk_RNA_Seq
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  # --- 核心生信分析软件 (自动匹配最新兼容版本) ---
+  - python=3.9
+  - hisat2
+  - subread
+  - samtools
+  - bedtools
+  - htseq     
+  - stringtie
+  - rmats
+  - rseqc
+  - fastp
+  - fastqc
+  - snakemake
+  - r-openxlsx
+
+  
+  # --- R 语言环境与绘图 ---
+  - r-base=4.2            # 建议保留4.2，因为它是目前生信包兼容性最好的版本
+  - r-ggplot2
+  - r-pheatmap
+  - r-ggrepel
+  - r-tidyverse           # 包含常用的数据处理包（dplyr, tidyr等）
+  
+  # --- 差异与富集分析 (针对小鼠) ---
+  - bioconductor-deseq2
+  - bioconductor-goseq
+  - bioconductor-clusterprofiler
+  - bioconductor-org.Mm.eg.db    # 小鼠物种数据库
+  - bioconductor-enrichplot
+  
+  # --- 依赖库 ---
+  - pip 
+  - pip:
+    - pandas
+    - matplotlib
+    - gseapy
